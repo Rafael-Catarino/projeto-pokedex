@@ -4,7 +4,7 @@
   border-radius: 20px 0px 0px 20px;
   border-right: none;
   margin-right: -6px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .search__pokemon {
@@ -13,7 +13,7 @@
   border-left: none;
   margin-top: 10px;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   width: 440px;
 }
 

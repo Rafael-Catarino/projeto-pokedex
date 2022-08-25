@@ -1,6 +1,6 @@
 .header {
   align-items: center;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -11,8 +11,8 @@
   height: 50px;
 }
 
-@media(max-width: 930px) {
-  .header .header__img__pokemon {
+@media(max-width: 498px) {
+  .header__image__pokemon {
     display: none;
   }
 }
