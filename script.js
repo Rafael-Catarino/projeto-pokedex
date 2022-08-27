@@ -3,11 +3,23 @@ const searchPokemon = document.querySelector('.search__pokemon');
 const containerPokemon = document.querySelector('.container__pokemon');
 const spanNamePokemon = document.getElementsByClassName('span-name-pokemon');
 
-buttonSearchPokemon.addEventListener('click', () => {
+const selectPokemon = () => {
   containerPokemon.innerHTML ='';
-  const url = `https://pokeapi.co/api/v2/pokemon/${searchPokemon.value}`;
-  fetch(url).then((response) => response.json())
-  .then((data) => createObjPokemon(data))
+  if (searchPokemon.value === "") {
+    fetchPokemons();
+  } else {
+    const url = `https://pokeapi.co/api/v2/pokemon/${searchPokemon.value.toLowerCase()}`;
+    fetch(url).then((response) => response.json())
+    .then((data) => createObjPokemon(data))
+  }
+}
+
+buttonSearchPokemon.addEventListener('click', selectPokemon);
+document.addEventListener('keydown', () => {
+  const key = event.keyCode;
+  if (key === 13) {
+    selectPokemon();
+  } 
 });
 
 
@@ -74,7 +86,7 @@ const createObjPokemon =(data) => {
 
 /* Função que faz a requisição fetch */
 const fetchPokemons = async () => {
-  for (let i = 1; i <= 251; i++) {
+  for (let i = 1; i <= 151; i++) {
     createObjPokemon(await getPokemon(i));
   }
 }
