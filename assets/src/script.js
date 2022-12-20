@@ -50,7 +50,7 @@ const ridingDivPokemon = ({ id, img, name, type, typecolor }) => {
 }
 
 /* Função que monta o objeto de cada pokemon */
-const createObjPokemon =(data) => { 
+const createObjPokemon =(data) => {
   const pokemon = {
     id: data.id,
     img: data.sprites.other.dream_world.front_default,
@@ -67,7 +67,7 @@ const fetchPokemons = async () => {
   for (let i = 1; i <= 151; i++) {
     arrData.push(await getPokemon(i));
   }
-  console.log(arrData);
+  document.querySelector('.loading').remove();
   arrData.forEach((e) => createObjPokemon(e));
 }
 
