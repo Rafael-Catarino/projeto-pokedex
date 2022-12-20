@@ -1,0 +1,21 @@
+{
+  "name": "projeto-pokedex",
+  "version": "1.0.0",
+  "description": "Projeto para treinar o que venho aprendendo em HTML, CSS e JavaScript.",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafael-Catarino/projeto-pokedex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rafael-Catarino/projeto-pokedex/issues"
+  },
+  "homepage": "https://github.com/Rafael-Catarino/projeto-pokedex#readme"
+}

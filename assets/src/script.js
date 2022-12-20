@@ -1,27 +1,4 @@
-const buttonSearchPokemon = document.querySelector('.search__button');
-const searchPokemon = document.querySelector('.search__pokemon');
 const containerPokemon = document.querySelector('.container__pokemon');
-const spanNamePokemon = document.getElementsByClassName('span-name-pokemon');
-
-const selectPokemon = () => {
-  containerPokemon.innerHTML ='';
-  if (searchPokemon.value === "") {
-    fetchPokemons();
-  } else {
-    const url = `https://pokeapi.co/api/v2/pokemon/${searchPokemon.value.toLowerCase()}`;
-    fetch(url).then((response) => response.json())
-    .then((data) => createObjPokemon(data))
-  }
-}
-
-buttonSearchPokemon.addEventListener('click', selectPokemon);
-document.addEventListener('keydown', () => {
-  const key = event.keyCode;
-  if (key === 13) {
-    selectPokemon();
-  } 
-});
-
 
 /* Criar o span para o type de cada pokemon  */
 const createSpanTypePokemon = (type) => {
@@ -85,10 +62,13 @@ const createObjPokemon =(data) => {
 }
 
 /* Função que faz a requisição fetch */
+let arrData = [];
 const fetchPokemons = async () => {
   for (let i = 1; i <= 151; i++) {
-    createObjPokemon(await getPokemon(i));
+    arrData.push(await getPokemon(i));
   }
+  console.log(arrData);
+  arrData.forEach((e) => createObjPokemon(e));
 }
 
 const getPokemon = async(id) => {
@@ -101,3 +81,5 @@ const getPokemon = async(id) => {
 window.onload = () => {
   fetchPokemons();
 }
+
+export {createObjPokemon, fetchPokemons};
