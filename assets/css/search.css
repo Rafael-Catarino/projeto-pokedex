@@ -1,6 +1,12 @@
+.search {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
 .search__button {
   background-color: white;
-  border: 1px solid black;
+  border: none;
   border-radius: 20px 0px 0px 20px;
   border-right: none;
   margin-right: -6px;
@@ -8,10 +14,9 @@
 }
 
 .search__pokemon {
-  border: 1px solid black;
+  border: none;
   border-radius: 0px 20px 20px 0px;
   border-left: none;
-  margin-top: 10px;
   text-align: center;
   padding: 10px;
   width: 440px;
@@ -26,8 +31,8 @@
   border-color: gray;
 }
 
-@media(max-width: 998px) {
+@media (max-width: 998px) {
   .search__pokemon {
-    width: 180px;;
+    width: 180px;
   }
 }

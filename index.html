@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="./assets/image/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/header.css">
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="./assets/css/search.css">
-  <link rel="stylesheet" href="./assets/css/pokemons.css">
-  <link rel="stylesheet" href="./assets/css/footer.css">
-  <title>Pokedex</title>
-</head>
-<body>
-  <!-- header -->
-  <header class="header">
-    <img class="header__image__pokemon" src="./assets/image/pokemon150px.png" alt="imagem pokémon">
-    <h1>Pokedex</h1>
-    <img class="header__img__pokebola" src="./assets/image/pokebola200px.png" alt="imagem pokebola">
-  </header>
-  <!-- main -->
-  <main>
-    <section class="search">
-      <button class="search__button search--hover">🔍</button>
-      <input class="search__pokemon search--hover" placeholder="Informe o nome do pokemon ou seu nº" type="text">
-    </section>
-    <section class="container__pokemon">
-      <img class="loading" src="assets/image/loading.gif" alt="Carregando">
-    </section>
-  </main>
-  <!-- footer -->
-  <footer class="footer">
-    <p>Desenvolvido por Rafael dos Santos Catarino</p>
-  </footer>
-</body>
-<script type="module" src="./assets/src/script.js"></script>
-<script type="module" src="./assets/src/searchPokemon.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/image/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/search.css" />
+    <link rel="stylesheet" href="./assets/css/pokemons.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <img
+        class="header__image__pokemon"
+        src="./assets/image/pokemon150px.png"
+        alt="imagem pokémon"
+      />
+      <h1>Pokedex</h1>
+      <img
+        class="header__img__pokebola"
+        src="./assets/image/pokebola200px.png"
+        alt="imagem pokebola"
+      />
+    </header>
+    <!-- main -->
+    <main>
+      <section class="search">
+        <button class="search__button search--hover">🔍</button>
+        <input
+          class="search__pokemon search--hover"
+          placeholder="Informe o nome do pokemon ou seu nº"
+          type="text"
+        />
+      </section>
+      <img class="loading" src="assets/image/loading.gif" alt="Carregando" />
+      <section class="container__pokemon"></section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <p>Desenvolvido por Rafael dos Santos Catarino</p>
+    </footer>
+  </body>
+  <script type="module" src="./assets/src/script.js"></script>
+  <script type="module" src="./assets/src/searchPokemon.js"></script>
 </html>
