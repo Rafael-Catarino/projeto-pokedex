@@ -33,6 +33,10 @@
   font-weight: bolder;
 }
 
+.loading {
+  display: none;
+}
+
 .grass {
   background-color: rgba(0, 128, 0, 0.178);
   border: 1px solid green;
